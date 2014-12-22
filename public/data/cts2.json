@@ -1,0 +1,938 @@
+{
+    "endpoints":[
+        {
+            "name":"CTS2 REST API",
+            "methods":[
+                {
+                    "MethodName":"Get CTS2 Service Metadata",
+                    "Synopsis":"Get CTS2 Service Metadata",
+                    "HTTPMethod":"GET",
+                    "URI":"/service",
+                    "parameters":[
+                        {
+                            "Name":"format",
+                            "Required":"N",
+                            "Type":"enumerated",
+                            "EnumeratedList": [
+                                "",
+                                "json",
+                                "xml"
+                            ],
+                            "EnumeratedDescription": {
+                                "": "Default (xml), or the value of the 'Accept' header",
+                                "json": "JSON Format",
+                                "xml": "CTS2 XML"
+                            },
+                            "Description":"Response Format"
+                        },
+                        {
+                            "Name":"maxtoreturn",
+                            "Required":"N",
+                            "Type":"int",
+                            "Description":"Number of results to return"
+                        }
+                    ]
+                
+                },
+                {
+                    "MethodName":"Search Code System Versions",
+                    "Synopsis":"Search All CTS2 Code System Versions",
+                    "HTTPMethod":"GET",
+                    "URI":"/codesystemversions",
+                    "parameters":[
+                        {
+                            "Name":"format",
+                            "Required":"N",
+                            "Type":"enumerated",
+                            "EnumeratedList": [
+                                "",
+                                "json",
+                                "xml"
+                            ],
+                            "EnumeratedDescription": {
+                                "": "Default (xml), or the value of the 'Accept' header",
+                                "json": "JSON Format",
+                                "xml": "CTS2 XML"
+                            },
+                            "Description":"Response Format"
+                        },
+                        {
+                            "Name":"q",
+                            "Required":"N",
+                            "Type":"string",
+                            "Description":"Query String"
+                        },
+                        {
+                            "Name":"filtercomponent",
+                            "Required":"N",
+                            "Type":"enumerated",
+                            "EnumeratedList": [
+                                "",
+                                "resourceSynopsis",
+                                "resourceName"
+                            ],
+                            "EnumeratedDescription": {
+                                "": "Default (resourceSynopsis)",
+                                "resourceSynopsis": "Search on Description",
+                                "resourceName": "Search on Name (Code)"
+                            },
+                            "Description":"Response Format"
+                        },
+                        {
+                            "Name":"maxtoreturn",
+                            "Required":"N",
+                            "Type":"int",
+                            "Description":"Number of results to return"
+                        },
+                        {
+                            "Name":"matchalgorithm",
+                            "Required":"N",
+                            "Default":"",
+                            "Type":"enumerated",
+                            "EnumeratedList": [
+                                "",
+                                "contains",
+                                "lucene",
+                                "startsWith",
+                                "exactMatch"
+                            ],
+                            "EnumeratedDescription": {
+                                "":"Default (contains)",
+                                "contains": "Contains match",
+                                "lucene": "Lucene search syntax",
+                                "startsWith": "Starts With",
+                                "exactMatch": "Exact Match"
+                            },
+                            "Description": "Match Algorithm"
+                        }
+                    ]
+                },
+                {
+                    "MethodName":"Read a Code System Version by Version ID",
+                    "Synopsis":"Read a Code System Version by ID",
+                    "HTTPMethod":"GET",
+                    "URI":"/codesystem/:codesystem/version/:version",
+                    "parameters":[
+                        {
+                            "Name":"codesystem",
+                            "Required":"Y",
+                            "Type":"string",
+                            "Default": "Zebrafish",
+                            "Description":"CodeSystem"
+                        },
+                        {
+                            "Name":"version",
+                            "Required":"Y",
+                            "Type":"string",
+                            "Default": "June_12_2014",
+                            "Description":"version"
+                        },
+                        {
+                            "Name":"format",
+                            "Required":"N",
+                            "Type":"enumerated",
+                            "EnumeratedList": [
+                                "",
+                                "json",
+                                "xml"
+                            ],
+                            "EnumeratedDescription": {
+                                "": "Default (xml), or the value of the 'Accept' header",
+                                "json": "JSON Format",
+                                "xml": "CTS2 XML"
+                            },
+                            "Description":"Response Format"
+
+                        }
+                    ]
+                },
+                {
+                    "MethodName":"Search Entities of a Code System Version",
+                    "Synopsis":"Search Entities of a Code System Version",
+                    "HTTPMethod":"GET",
+                    "URI":"/codesystem/:codesystem/version/:version/entities",
+                    "parameters":[
+                        {
+                            "Name":"codesystem",
+                            "Required":"Y",
+                            "Type":"string",
+                            "Default": "Zebrafish",
+                            "Description":"CodeSystem"
+                        },
+                        {
+                            "Name":"version",
+                            "Required":"Y",
+                            "Type":"string",
+                            "Default": "June_12_2014",
+                            "Description":"version"
+                        },
+                        {
+                            "Name":"format",
+                            "Required":"N",
+                            "Type":"enumerated",
+                            "EnumeratedList": [
+                                "",
+                                "json",
+                                "xml"
+                            ],
+                            "EnumeratedDescription": {
+                                "": "Default (xml), or the value of the 'Accept' header",
+                                "json": "JSON Format",
+                                "xml": "CTS2 XML"
+                            },
+                            "Description":"Response Format"
+                        },
+                        {
+                            "Name":"q",
+                            "Required":"N",
+                            "Type":"string",
+                            "Description":"Query String"
+                        },
+                        {
+                            "Name":"filtercomponent",
+                            "Required":"N",
+                            "Type":"enumerated",
+                            "EnumeratedList": [
+                                "",
+                                "resourceSynopsis",
+                                "resourceName"
+                            ],
+                            "EnumeratedDescription": {
+                                "": "Default (resourceSynopsis)",
+                                "resourceSynopsis": "Search on Description",
+                                "resourceName": "Search on Name (Code)"
+                            },
+                            "Description":"Response Format"
+                        },
+                        {
+                            "Name":"maxtoreturn",
+                            "Required":"N",
+                            "Type":"int",
+                            "Description":"Number of results to return"
+                        },
+                        {
+                            "Name":"matchalgorithm",
+                            "Required":"N",
+                            "Default":"",
+                            "Type":"enumerated",
+                            "EnumeratedList": [
+                                "",
+                                "contains",
+                                "lucene",
+                                "startsWith",
+                                "exactMatch"
+                            ],
+                            "EnumeratedDescription": {
+                                "":"Default (contains)",
+                                "contains": "Contains match",
+                                "lucene": "Lucene search syntax",
+                                "startsWith": "Starts With",
+                                "exactMatch": "Exact Match"
+                            },
+                            "Description": "Match Algorithm"
+                        }
+                    ]
+                },
+                {
+                    "MethodName":"Read an Entity of a Code System Version by ID",
+                    "Synopsis":"Read an Entity of a Code System Version by ID",
+                    "HTTPMethod":"GET",
+                    "URI":"/codesystem/:codesystem/version/:version/entity/:entityid",
+                    "parameters":[
+                        {
+                            "Name":"codesystem",
+                            "Required":"Y",
+                            "Type":"string",
+                            "Default": "Zebrafish",
+                            "Description":"CodeSystem"
+                        },
+                        {
+                            "Name":"version",
+                            "Required":"Y",
+                            "Type":"string",
+                            "Default": "June_12_2014",
+                            "Description":"version"
+                        },
+                        {
+                            "Name":"entityid",
+                            "Required":"Y",
+                            "Type":"string",
+                            "Default": "ZFA:0009044",
+                            "Description":"Entity ID"
+                        },
+                        {
+                            "Name":"format",
+                            "Required":"N",
+                            "Type":"enumerated",
+                            "EnumeratedList": [
+                                "",
+                                "json",
+                                "xml"
+                            ],
+                            "EnumeratedDescription": {
+                                "": "Default (xml), or the value of the 'Accept' header",
+                                "json": "JSON Format",
+                                "xml": "CTS2 XML"
+                            },
+                            "Description":"Response Format"
+
+                        }
+                    ]
+                },
+                {
+                    "MethodName":"Get 'children' associations",
+                    "Synopsis":"Get 'children' associations",
+                    "HTTPMethod":"GET",
+                    "URI":"/codesystem/:codesystem/version/:version/entity/:entityid/children",
+                    "parameters":[
+                        {
+                            "Name":"codesystem",
+                            "Required":"Y",
+                            "Type":"string",
+                            "Default": "Zebrafish",
+                            "Description":"CodeSystem"
+                        },
+                        {
+                            "Name":"version",
+                            "Required":"Y",
+                            "Type":"string",
+                            "Default": "June_12_2014",
+                            "Description":"version"
+                        },
+                        {
+                            "Name":"entityid",
+                            "Required":"Y",
+                            "Type":"string",
+                            "Default": "ZFA:0009044",
+                            "Description":"Entity ID"
+                        },
+                        {
+                            "Name":"format",
+                            "Required":"N",
+                            "Type":"enumerated",
+                            "EnumeratedList": [
+                                "",
+                                "json",
+                                "xml"
+                            ],
+                            "EnumeratedDescription": {
+                                "": "Default (xml), or the value of the 'Accept' header",
+                                "json": "JSON Format",
+                                "xml": "CTS2 XML"
+                            },
+                            "Description":"Response Format"
+
+                        }
+                    ]
+                },
+                {
+                    "MethodName":"Get 'subjectOf' associations",
+                    "Synopsis":"Get 'subjectOf' associations",
+                    "HTTPMethod":"GET",
+                    "URI":"/codesystem/:codesystem/version/:version/entity/:entityid/subjectof",
+                    "parameters":[
+                        {
+                            "Name":"codesystem",
+                            "Required":"Y",
+                            "Type":"string",
+                            "Default": "Zebrafish",
+                            "Description":"CodeSystem"
+                        },
+                        {
+                            "Name":"version",
+                            "Required":"Y",
+                            "Type":"string",
+                            "Default": "June_12_2014",
+                            "Description":"version"
+                        },
+                        {
+                            "Name":"entityid",
+                            "Required":"Y",
+                            "Type":"string",
+                            "Default": "ZFA:0009044",
+                            "Description":"Entity ID"
+                        },
+                        {
+                            "Name":"format",
+                            "Required":"N",
+                            "Type":"enumerated",
+                            "EnumeratedList": [
+                                "",
+                                "json",
+                                "xml"
+                            ],
+                            "EnumeratedDescription": {
+                                "": "Default (xml), or the value of the 'Accept' header",
+                                "json": "JSON Format",
+                                "xml": "CTS2 XML"
+                            },
+                            "Description":"Response Format"
+
+                        }
+                    ]
+                },
+                {
+                    "MethodName":"Get 'targetOf' associations",
+                    "Synopsis":"Get 'targetOf' associations",
+                    "HTTPMethod":"GET",
+                    "URI":"/codesystem/:codesystem/version/:version/entity/:entityid/targetof",
+                    "parameters":[
+                        {
+                            "Name":"codesystem",
+                            "Required":"Y",
+                            "Type":"string",
+                            "Default": "Zebrafish",
+                            "Description":"CodeSystem"
+                        },
+                        {
+                            "Name":"version",
+                            "Required":"Y",
+                            "Type":"string",
+                            "Default": "June_12_2014",
+                            "Description":"version"
+                        },
+                        {
+                            "Name":"entityid",
+                            "Required":"Y",
+                            "Type":"string",
+                            "Default": "ZFA:0009044",
+                            "Description":"Entity ID"
+                        },
+                        {
+                            "Name":"format",
+                            "Required":"N",
+                            "Type":"enumerated",
+                            "EnumeratedList": [
+                                "",
+                                "json",
+                                "xml"
+                            ],
+                            "EnumeratedDescription": {
+                                "": "Default (xml), or the value of the 'Accept' header",
+                                "json": "JSON Format",
+                                "xml": "CTS2 XML"
+                            },
+                            "Description":"Response Format"
+
+                        }
+                    ]
+                },
+                {
+                    "MethodName":"Search Value Sets",
+                    "Synopsis":"Search All CTS2 Value Sets",
+                    "HTTPMethod":"GET",
+                    "URI":"/valuesets",
+                    "parameters":[
+                        {
+                            "Name":"format",
+                            "Required":"N",
+                            "Type":"enumerated",
+                            "EnumeratedList": [
+                                "",
+                                "json",
+                                "xml"
+                            ],
+                            "EnumeratedDescription": {
+                                "": "Default (xml), or the value of the 'Accept' header",
+                                "json": "JSON Format",
+                                "xml": "CTS2 XML"
+                            },
+                            "Description":"Response Format"
+                        },
+                        {
+                            "Name":"q",
+                            "Required":"N",
+                            "Type":"string",
+                            "Description":"Query String"
+                        },
+                        {
+                            "Name":"filtercomponent",
+                            "Required":"N",
+                            "Type":"enumerated",
+                            "EnumeratedList": [
+                                "",
+                                "resourceSynopsis",
+                                "resourceName"
+                            ],
+                            "EnumeratedDescription": {
+                                "": "Default (resourceSynopsis)",
+                                "resourceSynopsis": "Search on Description",
+                                "resourceName": "Search on Name (Code)"
+                            },
+                            "Description":"Response Format"
+                        },
+                        {
+                            "Name":"maxtoreturn",
+                            "Required":"N",
+                            "Type":"int",
+                            "Description":"Number of results to return"
+                        },
+                        {
+                            "Name":"matchalgorithm",
+                            "Required":"N",
+                            "Default":"",
+                            "Type":"enumerated",
+                            "EnumeratedList": [
+                                "",
+                                "contains",
+                                "lucene",
+                                "startsWith",
+                                "exactMatch"
+                            ],
+                            "EnumeratedDescription": {
+                                "":"Default (contains)",
+                                "contains": "Contains match",
+                                "lucene": "Lucene search syntax",
+                                "startsWith": "Starts With",
+                                "exactMatch": "Exact Match"
+                            },
+                            "Description": "Match Algorithm"
+                        }
+                    ]
+                },
+                {
+                    "MethodName":"Read the specified Value Set",
+                    "Synopsis":"Read the specified Value Set",
+                    "HTTPMethod":"GET",
+                    "URI":"/valueset/:valueset",
+                    "parameters":[
+                        {
+                            "Name":"valueset",
+                            "Required":"Y",
+                            "Type":"string",
+                            "Default": "ActStatus",
+                            "Description":"CodeSystem"
+                        },
+                        {
+                            "Name":"format",
+                            "Required":"N",
+                            "Type":"enumerated",
+                            "EnumeratedList": [
+                                "",
+                                "json",
+                                "xml"
+                            ],
+                            "EnumeratedDescription": {
+                                "": "Default (xml), or the value of the 'Accept' header",
+                                "json": "JSON Format",
+                                "xml": "CTS2 XML"
+                            },
+                            "Description":"Response Format"
+
+                        }
+                    ]
+                },
+                {
+                    "MethodName":"Read a Value Set Definition ID",
+                    "Synopsis":"Read a Value Set Definition ID",
+                    "HTTPMethod":"GET",
+                    "URI":"/valueset/:valueset/definition/:definition",
+                    "parameters":[
+                        {
+                            "Name":"valueset",
+                            "Required":"Y",
+                            "Type":"string",
+                            "Default": "ActStatus",
+                            "Description":"CodeSystem"
+                        },
+                        {
+                            "Name":"definition",
+                            "Required":"Y",
+                            "Type":"string",
+                            "Default": "1",
+                            "Description":"version"
+                        },
+                        {
+                            "Name":"format",
+                            "Required":"N",
+                            "Type":"enumerated",
+                            "EnumeratedList": [
+                                "",
+                                "json",
+                                "xml"
+                            ],
+                            "EnumeratedDescription": {
+                                "": "Default (xml), or the value of the 'Accept' header",
+                                "json": "JSON Format",
+                                "xml": "CTS2 XML"
+                            },
+                            "Description":"Response Format"
+
+                        }
+                    ]
+                },
+                {
+                    "MethodName":"Resolve a Value Set Definition by ID",
+                    "Synopsis":"Resolve a Value Set Definition by ID",
+                    "HTTPMethod":"GET",
+                    "URI":"/valueset/:valueset/definition/:definition/resolution",
+                    "parameters":[
+                        {
+                            "Name":"valueset",
+                            "Required":"Y",
+                            "Type":"string",
+                            "Default": "ActStatus",
+                            "Description":"CodeSystem"
+                        },
+                        {
+                            "Name":"definition",
+                            "Required":"Y",
+                            "Type":"string",
+                            "Default": "1",
+                            "Description":"version"
+                        },
+                        {
+                            "Name":"format",
+                            "Required":"N",
+                            "Type":"enumerated",
+                            "EnumeratedList": [
+                                "",
+                                "json",
+                                "xml"
+                            ],
+                            "EnumeratedDescription": {
+                                "": "Default (xml), or the value of the 'Accept' header",
+                                "json": "JSON Format",
+                                "xml": "CTS2 XML"
+                            },
+                            "Description":"Response Format"
+
+                        },
+                        {
+                            "Name":"maxtoreturn",
+                            "Required":"N",
+                            "Type":"int",
+                            "Description":"Number of results to return"
+                        }
+                    ]
+                },
+                {
+                    "MethodName":"Search Resolved Value Set Definitions",
+                    "Synopsis":"Search All Pre-Resolved CTS2 Value Set Definitions. Note each Value Set Definition, when resolved, will be stored here for future use.",
+                    "HTTPMethod":"GET",
+                    "URI":"/resolvedvaluesets",
+                    "parameters":[
+                        {
+                            "Name":"format",
+                            "Required":"N",
+                            "Type":"enumerated",
+                            "EnumeratedList": [
+                                "",
+                                "json",
+                                "xml"
+                            ],
+                            "EnumeratedDescription": {
+                                "": "Default (xml), or the value of the 'Accept' header",
+                                "json": "JSON Format",
+                                "xml": "CTS2 XML"
+                            },
+                            "Description":"Response Format"
+                        },
+                        {
+                            "Name":"maxtoreturn",
+                            "Required":"N",
+                            "Type":"int",
+                            "Description":"Number of results to return"
+                        }
+                    ]
+                },
+                {
+                    "MethodName":"Search Map Version Summaries",
+                    "Synopsis":"Search Map Version Summaries",
+                    "HTTPMethod":"GET",
+                    "URI":"/mapversions",
+                    "parameters":[
+                        {
+                            "Name":"q",
+                            "Required":"N",
+                            "Type":"string",
+                            "Description":"Query String"
+                        },
+                        {
+                            "Name":"filtercomponent",
+                            "Required":"N",
+                            "Type":"enumerated",
+                            "EnumeratedList": [
+                                "",
+                                "resourceSynopsis",
+                                "resourceName"
+                            ],
+                            "EnumeratedDescription": {
+                                "": "Default (resourceSynopsis)",
+                                "resourceSynopsis": "Search on Description",
+                                "resourceName": "Search on Name (Code)"
+                            },
+                            "Description":"Response Format"
+                        },
+                        {
+                            "Name":"entity",
+                            "Required":"N",
+                            "Type":"string",
+                            "Description":"Entity to Query"
+                        },
+                        {
+                            "Name":"entitiesmaprole",
+                            "Required":"N",
+                            "Type":"enumerated",
+                            "EnumeratedList": [
+                                "",
+                                "MAP_FROM_ROLE",
+                                "MAP_TO_ROLE",
+                                "BOTH_MAP_ROLES"
+                            ],
+                            "EnumeratedDescription": {
+                                "": "",
+                                "MAP_FROM_ROLE": "Map From Role",
+                                "MAP_TO_ROLE": "Map To Role",
+                                "BOTH_MAP_ROLES":"Map both To and From Roles"
+                            },
+                            "Description":"Map Roles"
+                        },
+                        {
+                            "Name":"format",
+                            "Required":"N",
+                            "Type":"enumerated",
+                            "EnumeratedList": [
+                                "",
+                                "json",
+                                "xml"
+                            ],
+                            "EnumeratedDescription": {
+                                "": "Default (xml), or the value of the 'Accept' header",
+                                "json": "JSON Format",
+                                "xml": "CTS2 XML"
+                            },
+                            "Description":"Response Format"
+
+                        },
+                        {
+                            "Name":"maxtoreturn",
+                            "Required":"N",
+                            "Type":"int",
+                            "Description":"Number of results to return"
+                        }
+                    ]
+                },
+                {
+                    "MethodName":"Read a Map by Map ID",
+                    "Synopsis":"Read a Map by Map ID",
+                    "HTTPMethod":"GET",
+                    "URI":"/map/:map",
+                    "parameters":[
+                        {
+                            "Name":"map",
+                            "Required":"Y",
+                            "Type":"string",
+                            "Default": "MA_to_NCIt_Mapping",
+                            "Description":"map"
+                        },
+                        {
+                            "Name":"format",
+                            "Required":"N",
+                            "Type":"enumerated",
+                            "EnumeratedList": [
+                                "",
+                                "json",
+                                "xml"
+                            ],
+                            "EnumeratedDescription": {
+                                "": "Default (xml), or the value of the 'Accept' header",
+                                "json": "JSON Format",
+                                "xml": "CTS2 XML"
+                            },
+                            "Description":"Response Format"
+
+                        },
+                        {
+                            "Name":"maxtoreturn",
+                            "Required":"N",
+                            "Type":"int",
+                            "Description":"Number of results to return"
+                        }
+                    ]
+                },
+                {
+                    "MethodName":"Read Map versions of Map by Map ID",
+                    "Synopsis":"Read Map versions of Map by Map ID",
+                    "HTTPMethod":"GET",
+                    "URI":"/map/:map/versions",
+                    "parameters":[
+                        {
+                            "Name":"map",
+                            "Required":"Y",
+                            "Type":"string",
+                            "Default": "MA_to_NCIt_Mapping",
+                            "Description":"map"
+                        },
+                        {
+                            "Name":"format",
+                            "Required":"N",
+                            "Type":"enumerated",
+                            "EnumeratedList": [
+                                "",
+                                "json",
+                                "xml"
+                            ],
+                            "EnumeratedDescription": {
+                                "": "Default (xml), or the value of the 'Accept' header",
+                                "json": "JSON Format",
+                                "xml": "CTS2 XML"
+                            },
+                            "Description":"Response Format"
+
+                        },
+                        {
+                            "Name":"maxtoreturn",
+                            "Required":"N",
+                            "Type":"int",
+                            "Description":"Number of results to return"
+                        }
+                    ]
+                },
+                {
+                    "MethodName":"Read specific version of a Map by Map ID",
+                    "Synopsis":"Read specific version of a Map by Map ID",
+                    "HTTPMethod":"GET",
+                    "URI":"/map/:map/version/:version",
+                    "parameters":[
+                        {
+                            "Name":"map",
+                            "Required":"Y",
+                            "Type":"string",
+                            "Default": "MA_to_NCIt_Mapping",
+                            "Description":"map"
+                        },
+                        {
+                            "Name":"version",
+                            "Required":"Y",
+                            "Type":"string",
+                            "Default": "MA_to_NCIt_Mapping-1.0",
+                            "Description":"map version"
+                        },
+                        {
+                            "Name":"format",
+                            "Required":"N",
+                            "Type":"enumerated",
+                            "EnumeratedList": [
+                                "",
+                                "json",
+                                "xml"
+                            ],
+                            "EnumeratedDescription": {
+                                "": "Default (xml), or the value of the 'Accept' header",
+                                "json": "JSON Format",
+                                "xml": "CTS2 XML"
+                            },
+                            "Description":"Response Format"
+
+                        },
+                        {
+                            "Name":"maxtoreturn",
+                            "Required":"N",
+                            "Type":"int",
+                            "Description":"Number of results to return"
+                        }
+                    ]
+                },
+                {
+                    "MethodName":"Read entries of a specific version of a Map by Map ID",
+                    "Synopsis":"Read entries of a specific version of a Map by Map ID",
+                    "HTTPMethod":"GET",
+                    "URI":"/map/:map/version/:version/entries",
+                    "parameters":[
+                        {
+                            "Name":"map",
+                            "Required":"Y",
+                            "Type":"string",
+                            "Default": "MA_to_NCIt_Mapping",
+                            "Description":"map"
+                        },
+                        {
+                            "Name":"version",
+                            "Required":"Y",
+                            "Type":"string",
+                            "Default": "MA_to_NCIt_Mapping-1.0",
+                            "Description":"map version"
+                        },
+                        {
+                            "Name":"format",
+                            "Required":"N",
+                            "Type":"enumerated",
+                            "EnumeratedList": [
+                                "",
+                                "json",
+                                "xml"
+                            ],
+                            "EnumeratedDescription": {
+                                "": "Default (xml), or the value of the 'Accept' header",
+                                "json": "JSON Format",
+                                "xml": "CTS2 XML"
+                            },
+                            "Description":"Response Format"
+
+                        },
+                        {
+                            "Name":"maxtoreturn",
+                            "Required":"N",
+                            "Type":"int",
+                            "Description":"Number of results to return"
+                        }
+                    ]
+                },
+                {
+                    "MethodName":"Restrict entry of a specific version of a Map by Map ID",
+                    "Synopsis":"Restrict entry of a specific version of a Map by Map ID",
+                    "HTTPMethod":"GET",
+                    "URI":"/map/:map/version/:version/entry/:mapfrom",
+                    "parameters":[
+                        {
+                            "Name":"map",
+                            "Required":"Y",
+                            "Type":"string",
+                            "Default": "MA_to_NCIt_Mapping",
+                            "Description":"map"
+                        },
+                        {
+                            "Name":"version",
+                            "Required":"Y",
+                            "Type":"string",
+                            "Default": "MA_to_NCIt_Mapping-1.0",
+                            "Description":"map version"
+                        },
+                        {
+                            "Name":"mapfrom",
+                            "Required":"Y",
+                            "Type":"string",
+                            "Default": "MA:0000002",
+                            "Description":"map from"
+                        },
+                        {
+                            "Name":"format",
+                            "Required":"N",
+                            "Type":"enumerated",
+                            "EnumeratedList": [
+                                "",
+                                "json",
+                                "xml"
+                            ],
+                            "EnumeratedDescription": {
+                                "": "Default (xml), or the value of the 'Accept' header",
+                                "json": "JSON Format",
+                                "xml": "CTS2 XML"
+                            },
+                            "Description":"Response Format"
+
+                        },
+                        {
+                            "Name":"maxtoreturn",
+                            "Required":"N",
+                            "Type":"int",
+                            "Description":"Number of results to return"
+                        }
+                    ]
+                }
+                
+            ]
+        }
+    ]
+}

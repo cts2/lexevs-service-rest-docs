@@ -1,0 +1,8 @@
+{
+    "cts2": {
+        "name": "CTS2",
+        "protocol": "http",
+        "baseURL": "informatics.mayo.edu",
+        "publicPath": "/cts2/services/evscts2"
+    }
+}
