@@ -24,21 +24,15 @@
                                 "xml": "CTS2 XML"
                             },
                             "Description":"Response Format"
-                        },
-                        {
-                            "Name":"maxtoreturn",
-                            "Required":"N",
-                            "Type":"int",
-                            "Description":"Number of results to return"
                         }
                     ]
                 
                 },
                 {
-                    "MethodName":"Search Code System Versions",
-                    "Synopsis":"Search All CTS2 Code System Versions",
+                    "MethodName":"Search Entities",
+                    "Synopsis":"Search All CTS2 Entities",
                     "HTTPMethod":"GET",
-                    "URI":"/codesystemversions",
+                    "URI":"/entities",
                     "parameters":[
                         {
                             "Name":"format",
@@ -92,18 +86,239 @@
                             "EnumeratedList": [
                                 "",
                                 "contains",
-                                "lucene",
+                                "luceneQuery",
+                                "exactMatch"
+                            ],
+                            "EnumeratedDescription": {
+                                "":"Default (contains)",
+                                "contains": "Contains match",
+                                "luceneQuery": "Lucene search syntax",
+                                "exactMatch": "Exact Match"
+                            },
+                            "Description": "Match Algorithm"
+                        }
+                    ]
+                },
+                {
+                    "MethodName":"Count Entities",
+                    "Synopsis":"Count All CTS2 Entities",
+                    "HTTPMethod":"HEAD",
+                    "URI":"/entities",
+                    "parameters":[
+                        {
+                            "Name":"q",
+                            "Required":"N",
+                            "Type":"string",
+                            "Description":"Query String"
+                        },
+                        {
+                            "Name":"filtercomponent",
+                            "Required":"N",
+                            "Type":"enumerated",
+                            "EnumeratedList": [
+                                "",
+                                "resourceSynopsis",
+                                "resourceName"
+                            ],
+                            "EnumeratedDescription": {
+                                "": "Default (resourceSynopsis)",
+                                "resourceSynopsis": "Search on Description",
+                                "resourceName": "Search on Name (Code)"
+                            },
+                            "Description":"Response Format"
+                        },
+                        {
+                            "Name":"matchalgorithm",
+                            "Required":"N",
+                            "Default":"",
+                            "Type":"enumerated",
+                            "EnumeratedList": [
+                                "",
+                                "contains",
+                                "luceneQuery",
                                 "startsWith",
                                 "exactMatch"
                             ],
                             "EnumeratedDescription": {
                                 "":"Default (contains)",
                                 "contains": "Contains match",
-                                "lucene": "Lucene search syntax",
+                                "luceneQuery": "Lucene search syntax",
                                 "startsWith": "Starts With",
                                 "exactMatch": "Exact Match"
                             },
                             "Description": "Match Algorithm"
+                        }
+                    ]
+                },
+                {
+                    "MethodName":"Read an Entity by URI",
+                    "Synopsis":"Read an Entity by URI",
+                    "HTTPMethod":"GET",
+                    "URI":"/entitybyuri",
+                    "parameters":[
+                        {
+                            "Name":"uri",
+                            "Required":"Y",
+                            "Type":"string",
+                            "Default": "ICD-9-CM:00.84",
+                            "Description":"Entity URI"
+                        },
+                        {
+                            "Name":"format",
+                            "Required":"N",
+                            "Type":"enumerated",
+                            "EnumeratedList": [
+                                "",
+                                "json",
+                                "xml"
+                            ],
+                            "EnumeratedDescription": {
+                                "": "Default (xml), or the value of the 'Accept' header",
+                                "json": "JSON Format",
+                                "xml": "CTS2 XML"
+                            },
+                            "Description":"Response Format"
+
+                        }
+                    ]
+                },
+                {
+                    "MethodName":"Read an Entity by ID",
+                    "Synopsis":"Read an Entity by ID",
+                    "HTTPMethod":"GET",
+                    "URI":"/entity/:entityid",
+                    "parameters":[
+                        {
+                            "Name":"entityid",
+                            "Required":"Y",
+                            "Type":"string",
+                            "Default": "ICD-9-CM:00.84",
+                            "Description":"Entity ID"
+                        },
+                        {
+                            "Name":"format",
+                            "Required":"N",
+                            "Type":"enumerated",
+                            "EnumeratedList": [
+                                "",
+                                "json",
+                                "xml"
+                            ],
+                            "EnumeratedDescription": {
+                                "": "Default (xml), or the value of the 'Accept' header",
+                                "json": "JSON Format",
+                                "xml": "CTS2 XML"
+                            },
+                            "Description":"Response Format"
+                        },
+                        {
+                            "Name":"active",
+                            "Required":"N",
+                            "Type":"enumerated",
+                            "EnumeratedList": [
+                                "",
+                                "ACTIVE_ONLY",
+                                "ACTIVE_AND_INACTIVE"
+                            ],
+                            "EnumeratedDescription": {
+                                "": "Default (ACTIVE_ONLY)",
+                                "ACTIVE_ONLY": "Active Entities",
+                                "ACTIVE_AND_INACTIVE": "All Entities"
+                            },
+                            "Description":"Query Active or All Entities"
+                        }
+                    ]
+                },
+                {
+                    "MethodName":"Search Code System Versions",
+                    "Synopsis":"Search All CTS2 Code System Versions",
+                    "HTTPMethod":"GET",
+                    "URI":"/codesystemversions",
+                    "parameters":[
+                        {
+                            "Name":"format",
+                            "Required":"N",
+                            "Type":"enumerated",
+                            "EnumeratedList": [
+                                "",
+                                "json",
+                                "xml"
+                            ],
+                            "EnumeratedDescription": {
+                                "": "Default (xml), or the value of the 'Accept' header",
+                                "json": "JSON Format",
+                                "xml": "CTS2 XML"
+                            },
+                            "Description":"Response Format"
+                        },
+                        {
+                            "Name":"matchvalue",
+                            "Required":"N",
+                            "Type":"string",
+                            "Description":"Query String"
+                        },
+                        {
+                            "Name":"filtercomponent",
+                            "Required":"N",
+                            "Type":"enumerated",
+                            "EnumeratedList": [
+                                "",
+                                "resourceSynopsis",
+                                "resourceName",
+                                "about",
+                                "tag"
+                            ],
+                            "EnumeratedDescription": {
+                                "": "Default (resourceSynopsis)",
+                                "resourceSynopsis": "Search on Description",
+                                "resourceName": "Search on Name (Code System)",
+                                "about": "Search on About",
+                                "tag": "Search on Version"
+                            },
+                            "Description":"Component to Search On"
+                        },
+                        {
+                            "Name":"maxtoreturn",
+                            "Required":"N",
+                            "Type":"int",
+                            "Description":"Number of results to return"
+                        },
+                        {
+                            "Name":"matchalgorithm",
+                            "Required":"N",
+                            "Default":"",
+                            "Type":"enumerated",
+                            "EnumeratedList": [
+                                "",
+                                "contains",
+                                "luceneQuery",
+                                "startsWith",
+                                "exactMatch"
+                            ],
+                            "EnumeratedDescription": {
+                                "":"Default (contains)",
+                                "contains": "Contains match",
+                                "luceneQuery": "Lucene search syntax",
+                                "startsWith": "Starts With",
+                                "exactMatch": "Exact Match"
+                            },
+                            "Description": "Match Algorithm"
+                        },
+                        {
+                            "Name":"active",
+                            "Required":"N",
+                            "Type":"enumerated",
+                            "EnumeratedList": [
+                                "",
+                                "ACTIVE_ONLY",
+                                "ACTIVE_AND_INACTIVE"
+                            ],
+                            "EnumeratedDescription": {
+                                "": "Default (ACTIVE_ONLY)",
+                                "ACTIVE_ONLY": "Active Entities",
+                                "ACTIVE_AND_INACTIVE": "All Entities"
+                            },
+                            "Description":"Query Active or All Entities"
                         }
                     ]
                 },
@@ -117,14 +332,14 @@
                             "Name":"codesystem",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "Zebrafish",
-                            "Description":"CodeSystem"
+                            "Default": "OBI",
+                            "Description":"codeSystem"
                         },
                         {
                             "Name":"version",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "June_12_2014",
+                            "Default": "December2014",
                             "Description":"version"
                         },
                         {
@@ -156,14 +371,14 @@
                             "Name":"codesystem",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "Zebrafish",
+                            "Default": "OBI",
                             "Description":"CodeSystem"
                         },
                         {
                             "Name":"version",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "June_12_2014",
+                            "Default": "December2014",
                             "Description":"version"
                         },
                         {
@@ -218,18 +433,34 @@
                             "EnumeratedList": [
                                 "",
                                 "contains",
-                                "lucene",
+                                "luceneQuery",
                                 "startsWith",
                                 "exactMatch"
                             ],
                             "EnumeratedDescription": {
                                 "":"Default (contains)",
                                 "contains": "Contains match",
-                                "lucene": "Lucene search syntax",
+                                "luceneQuery": "Lucene search syntax",
                                 "startsWith": "Starts With",
                                 "exactMatch": "Exact Match"
                             },
                             "Description": "Match Algorithm"
+                        },
+                        {
+                            "Name":"active",
+                            "Required":"N",
+                            "Type":"enumerated",
+                            "EnumeratedList": [
+                                "",
+                                "ACTIVE_ONLY",
+                                "ACTIVE_AND_INACTIVE"
+                            ],
+                            "EnumeratedDescription": {
+                                "": "Default (ACTIVE_ONLY)",
+                                "ACTIVE_ONLY": "Active Entities",
+                                "ACTIVE_AND_INACTIVE": "All Entities"
+                            },
+                            "Description":"Query Active or All Entities"
                         }
                     ]
                 },
@@ -243,21 +474,21 @@
                             "Name":"codesystem",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "Zebrafish",
+                            "Default": "OBI",
                             "Description":"CodeSystem"
                         },
                         {
                             "Name":"version",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "June_12_2014",
+                            "Default": "December2014",
                             "Description":"version"
                         },
                         {
                             "Name":"entityid",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "ZFA:0009044",
+                            "Default": "obo:GO_0043227",
                             "Description":"Entity ID"
                         },
                         {
@@ -289,21 +520,21 @@
                             "Name":"codesystem",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "Zebrafish",
+                            "Default": "OBI",
                             "Description":"CodeSystem"
                         },
                         {
                             "Name":"version",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "June_12_2014",
+                            "Default": "December2014",
                             "Description":"version"
                         },
                         {
                             "Name":"entityid",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "ZFA:0009044",
+                            "Default": "GO_0005575",
                             "Description":"Entity ID"
                         },
                         {
@@ -335,21 +566,21 @@
                             "Name":"codesystem",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "Zebrafish",
+                            "Default": "OBI",
                             "Description":"CodeSystem"
                         },
                         {
                             "Name":"version",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "June_12_2014",
+                            "Default": "December2014",
                             "Description":"version"
                         },
                         {
                             "Name":"entityid",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "ZFA:0009044",
+                            "Default": "obo:GO_0043227",
                             "Description":"Entity ID"
                         },
                         {
@@ -381,21 +612,21 @@
                             "Name":"codesystem",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "Zebrafish",
+                            "Default": "OBI",
                             "Description":"CodeSystem"
                         },
                         {
                             "Name":"version",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "June_12_2014",
+                            "Default": "December2014",
                             "Description":"version"
                         },
                         {
                             "Name":"entityid",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "ZFA:0009044",
+                            "Default": "obo:GO_0005575",
                             "Description":"Entity ID"
                         },
                         {
@@ -475,14 +706,14 @@
                             "EnumeratedList": [
                                 "",
                                 "contains",
-                                "lucene",
+                                "luceneQuery",
                                 "startsWith",
                                 "exactMatch"
                             ],
                             "EnumeratedDescription": {
                                 "":"Default (contains)",
                                 "contains": "Contains match",
-                                "lucene": "Lucene search syntax",
+                                "luceneQuery": "Lucene search syntax",
                                 "startsWith": "Starts With",
                                 "exactMatch": "Exact Match"
                             },
@@ -500,7 +731,7 @@
                             "Name":"valueset",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "ActStatus",
+                            "Default": "CDISC ADaM Terminology",
                             "Description":"CodeSystem"
                         },
                         {
@@ -532,7 +763,7 @@
                             "Name":"valueset",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "ActStatus",
+                            "Default": "CDISC ADaM Terminology",
                             "Description":"CodeSystem"
                         },
                         {
