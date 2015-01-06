@@ -718,6 +718,22 @@
                                 "exactMatch": "Exact Match"
                             },
                             "Description": "Match Algorithm"
+                        },
+                        {
+                            "Name":"active",
+                            "Required":"N",
+                            "Type":"enumerated",
+                            "EnumeratedList": [
+                                "",
+                                "ACTIVE_ONLY",
+                                "ACTIVE_AND_INACTIVE"
+                            ],
+                            "EnumeratedDescription": {
+                                "": "Default (ACTIVE_ONLY)",
+                                "ACTIVE_ONLY": "Active Valuesets",
+                                "ACTIVE_AND_INACTIVE": "All Valuesets"
+                            },
+                            "Description":"Query Active or All Valuesets"
                         }
                     ]
                 },
@@ -750,6 +766,22 @@
                             },
                             "Description":"Response Format"
 
+                        },
+                        {
+                            "Name":"active",
+                            "Required":"N",
+                            "Type":"enumerated",
+                            "EnumeratedList": [
+                                "",
+                                "ACTIVE_ONLY",
+                                "ACTIVE_AND_INACTIVE"
+                            ],
+                            "EnumeratedDescription": {
+                                "": "Default (ACTIVE_ONLY)",
+                                "ACTIVE_ONLY": "Active Valuesets",
+                                "ACTIVE_AND_INACTIVE": "All Valuesets"
+                            },
+                            "Description":"Query Active or All Valuesets"
                         }
                     ]
                 },
@@ -770,7 +802,7 @@
                             "Name":"definition",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "1",
+                            "Default": "5f51c37b",
                             "Description":"version"
                         },
                         {
@@ -788,7 +820,6 @@
                                 "xml": "CTS2 XML"
                             },
                             "Description":"Response Format"
-
                         }
                     ]
                 },
@@ -802,14 +833,14 @@
                             "Name":"valueset",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "ActStatus",
+                            "Default": "CDISC ADaM Terminology",
                             "Description":"CodeSystem"
                         },
                         {
                             "Name":"definition",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "1",
+                            "Default": "5f51c37b",
                             "Description":"version"
                         },
                         {
@@ -839,7 +870,7 @@
                 },
                 {
                     "MethodName":"Search Resolved Value Set Definitions",
-                    "Synopsis":"Search All Pre-Resolved CTS2 Value Set Definitions. Note each Value Set Definition, when resolved, will be stored here for future use.",
+                    "Synopsis":"Search All Pre-Resolved CTS2 Value Set Definitions.",
                     "HTTPMethod":"GET",
                     "URI":"/resolvedvaluesets",
                     "parameters":[
@@ -858,6 +889,47 @@
                                 "xml": "CTS2 XML"
                             },
                             "Description":"Response Format"
+                        },
+                        {
+                            "Name":"q",
+                            "Required":"N",
+                            "Type":"string",
+                            "Description":"Query String"
+                        },
+                        {
+                            "Name":"filtercomponent",
+                            "Required":"N",
+                            "Type":"enumerated",
+                            "EnumeratedList": [
+                                "",
+                                "resourceSynopsis",
+                                "resourceName"
+                            ],
+                            "EnumeratedDescription": {
+                                "": "Default (resourceSynopsis)",
+                                "resourceSynopsis": "Search on Description",
+                                "resourceName": "Search on Name (Code)"
+                            },
+                            "Description":"Response Format"
+                        },
+                        {
+                            "Name":"matchalgorithm",
+                            "Required":"N",
+                            "Default":"",
+                            "Type":"enumerated",
+                            "EnumeratedList": [
+                                "",
+                                "contains",
+                                "startsWith",
+                                "exactMatch"
+                            ],
+                            "EnumeratedDescription": {
+                                "":"Default (contains)",
+                                "contains": "Contains match",
+                                "startsWith": "Starts With",
+                                "exactMatch": "Exact Match"
+                            },
+                            "Description": "Match Algorithm"
                         },
                         {
                             "Name":"maxtoreturn",
@@ -894,12 +966,6 @@
                                 "resourceName": "Search on Name (Code)"
                             },
                             "Description":"Response Format"
-                        },
-                        {
-                            "Name":"entity",
-                            "Required":"N",
-                            "Type":"string",
-                            "Description":"Entity to Query"
                         },
                         {
                             "Name":"entitiesmaprole",
@@ -954,7 +1020,7 @@
                             "Name":"map",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "MA_to_NCIt_Mapping",
+                            "Default": "PDQ2013_02_15_TO_NCI2013_06D",
                             "Description":"map"
                         },
                         {
@@ -992,7 +1058,7 @@
                             "Name":"map",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "MA_to_NCIt_Mapping",
+                            "Default": "PDQ2013_02_15_TO_NCI2013_06D",
                             "Description":"map"
                         },
                         {
@@ -1030,14 +1096,14 @@
                             "Name":"map",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "MA_to_NCIt_Mapping",
+                            "Default": "PDQ2013_02_15_TO_NCI2013_06D",
                             "Description":"map"
                         },
                         {
                             "Name":"version",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "MA_to_NCIt_Mapping-1.0",
+                            "Default": "PDQ2013_02_15_TO_NCI2013_06D-2013_02_15",
                             "Description":"map version"
                         },
                         {
@@ -1075,14 +1141,14 @@
                             "Name":"map",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "MA_to_NCIt_Mapping",
+                            "Default": "PDQ2013_02_15_TO_NCI2013_06D",
                             "Description":"map"
                         },
                         {
                             "Name":"version",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "MA_to_NCIt_Mapping-1.0",
+                            "Default": "PDQ2013_02_15_TO_NCI2013_06D-2013_02_15",
                             "Description":"map version"
                         },
                         {
@@ -1120,21 +1186,21 @@
                             "Name":"map",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "MA_to_NCIt_Mapping",
+                            "Default": "PDQ2013_02_15_TO_NCI2013_06D",
                             "Description":"map"
                         },
                         {
                             "Name":"version",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "MA_to_NCIt_Mapping-1.0",
+                            "Default": "PDQ2013_02_15_TO_NCI2013_06D-2013_02_15",
                             "Description":"map version"
                         },
                         {
                             "Name":"mapfrom",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "MA:0000002",
+                            "Default": "PDQ:CDR0000744999",
                             "Description":"map from"
                         },
                         {
