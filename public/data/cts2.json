@@ -291,14 +291,12 @@
                             "EnumeratedList": [
                                 "",
                                 "contains",
-                                "luceneQuery",
                                 "startsWith",
                                 "exactMatch"
                             ],
                             "EnumeratedDescription": {
                                 "":"Default (contains)",
                                 "contains": "Contains match",
-                                "luceneQuery": "Lucene search syntax",
                                 "startsWith": "Starts With",
                                 "exactMatch": "Exact Match"
                             },
