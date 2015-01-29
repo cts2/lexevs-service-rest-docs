@@ -1,6 +1,6 @@
 {
     "cts2": {
-        "name": "CTS2",
+        "name": "LexEVS CTS2 6.2 API Documentation (lexevs62cts2.nci.nih.gov/lexevscts2)",
         "protocol": "http",
         "baseURL": "lexevs62cts2.nci.nih.gov",
         "publicPath": "/lexevscts2"

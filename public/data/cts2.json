@@ -9,22 +9,6 @@
                     "HTTPMethod":"GET",
                     "URI":"/service",
                     "parameters":[
-                        {
-                            "Name":"format",
-                            "Required":"N",
-                            "Type":"enumerated",
-                            "EnumeratedList": [
-                                "",
-                                "json",
-                                "xml"
-                            ],
-                            "EnumeratedDescription": {
-                                "": "Default (xml), or the value of the 'Accept' header",
-                                "json": "JSON Format",
-                                "xml": "CTS2 XML"
-                            },
-                            "Description":"Response Format"
-                        }
                     ]
                 
                 },
@@ -34,22 +18,6 @@
                     "HTTPMethod":"GET",
                     "URI":"/entities",
                     "parameters":[
-                        {
-                            "Name":"format",
-                            "Required":"N",
-                            "Type":"enumerated",
-                            "EnumeratedList": [
-                                "",
-                                "json",
-                                "xml"
-                            ],
-                            "EnumeratedDescription": {
-                                "": "Default (xml), or the value of the 'Accept' header",
-                                "json": "JSON Format",
-                                "xml": "CTS2 XML"
-                            },
-                            "Description":"Response Format"
-                        },
                         {
                             "Name":"q",
                             "Required":"N",
@@ -162,23 +130,6 @@
                             "Type":"string",
                             "Default": "ICD-9-CM:00.84",
                             "Description":"Entity URI"
-                        },
-                        {
-                            "Name":"format",
-                            "Required":"N",
-                            "Type":"enumerated",
-                            "EnumeratedList": [
-                                "",
-                                "json",
-                                "xml"
-                            ],
-                            "EnumeratedDescription": {
-                                "": "Default (xml), or the value of the 'Accept' header",
-                                "json": "JSON Format",
-                                "xml": "CTS2 XML"
-                            },
-                            "Description":"Response Format"
-
                         }
                     ]
                 },
@@ -194,22 +145,6 @@
                             "Type":"string",
                             "Default": "ICD-9-CM:00.84",
                             "Description":"Entity ID"
-                        },
-                        {
-                            "Name":"format",
-                            "Required":"N",
-                            "Type":"enumerated",
-                            "EnumeratedList": [
-                                "",
-                                "json",
-                                "xml"
-                            ],
-                            "EnumeratedDescription": {
-                                "": "Default (xml), or the value of the 'Accept' header",
-                                "json": "JSON Format",
-                                "xml": "CTS2 XML"
-                            },
-                            "Description":"Response Format"
                         },
                         {
                             "Name":"active",
@@ -235,22 +170,6 @@
                     "HTTPMethod":"GET",
                     "URI":"/codesystemversions",
                     "parameters":[
-                        {
-                            "Name":"format",
-                            "Required":"N",
-                            "Type":"enumerated",
-                            "EnumeratedList": [
-                                "",
-                                "json",
-                                "xml"
-                            ],
-                            "EnumeratedDescription": {
-                                "": "Default (xml), or the value of the 'Accept' header",
-                                "json": "JSON Format",
-                                "xml": "CTS2 XML"
-                            },
-                            "Description":"Response Format"
-                        },
                         {
                             "Name":"matchvalue",
                             "Required":"N",
@@ -339,23 +258,6 @@
                             "Type":"string",
                             "Default": "December2014",
                             "Description":"version"
-                        },
-                        {
-                            "Name":"format",
-                            "Required":"N",
-                            "Type":"enumerated",
-                            "EnumeratedList": [
-                                "",
-                                "json",
-                                "xml"
-                            ],
-                            "EnumeratedDescription": {
-                                "": "Default (xml), or the value of the 'Accept' header",
-                                "json": "JSON Format",
-                                "xml": "CTS2 XML"
-                            },
-                            "Description":"Response Format"
-
                         }
                     ]
                 },
@@ -378,22 +280,6 @@
                             "Type":"string",
                             "Default": "December2014",
                             "Description":"version"
-                        },
-                        {
-                            "Name":"format",
-                            "Required":"N",
-                            "Type":"enumerated",
-                            "EnumeratedList": [
-                                "",
-                                "json",
-                                "xml"
-                            ],
-                            "EnumeratedDescription": {
-                                "": "Default (xml), or the value of the 'Accept' header",
-                                "json": "JSON Format",
-                                "xml": "CTS2 XML"
-                            },
-                            "Description":"Response Format"
                         },
                         {
                             "Name":"q",
@@ -488,23 +374,6 @@
                             "Type":"string",
                             "Default": "obo:GO_0043227",
                             "Description":"Entity ID"
-                        },
-                        {
-                            "Name":"format",
-                            "Required":"N",
-                            "Type":"enumerated",
-                            "EnumeratedList": [
-                                "",
-                                "json",
-                                "xml"
-                            ],
-                            "EnumeratedDescription": {
-                                "": "Default (xml), or the value of the 'Accept' header",
-                                "json": "JSON Format",
-                                "xml": "CTS2 XML"
-                            },
-                            "Description":"Response Format"
-
                         }
                     ]
                 },
@@ -534,23 +403,6 @@
                             "Type":"string",
                             "Default": "GO_0005575",
                             "Description":"Entity ID"
-                        },
-                        {
-                            "Name":"format",
-                            "Required":"N",
-                            "Type":"enumerated",
-                            "EnumeratedList": [
-                                "",
-                                "json",
-                                "xml"
-                            ],
-                            "EnumeratedDescription": {
-                                "": "Default (xml), or the value of the 'Accept' header",
-                                "json": "JSON Format",
-                                "xml": "CTS2 XML"
-                            },
-                            "Description":"Response Format"
-
                         }
                     ]
                 },
@@ -580,23 +432,6 @@
                             "Type":"string",
                             "Default": "obo:GO_0043227",
                             "Description":"Entity ID"
-                        },
-                        {
-                            "Name":"format",
-                            "Required":"N",
-                            "Type":"enumerated",
-                            "EnumeratedList": [
-                                "",
-                                "json",
-                                "xml"
-                            ],
-                            "EnumeratedDescription": {
-                                "": "Default (xml), or the value of the 'Accept' header",
-                                "json": "JSON Format",
-                                "xml": "CTS2 XML"
-                            },
-                            "Description":"Response Format"
-
                         }
                     ]
                 },
@@ -626,23 +461,6 @@
                             "Type":"string",
                             "Default": "obo:GO_0005575",
                             "Description":"Entity ID"
-                        },
-                        {
-                            "Name":"format",
-                            "Required":"N",
-                            "Type":"enumerated",
-                            "EnumeratedList": [
-                                "",
-                                "json",
-                                "xml"
-                            ],
-                            "EnumeratedDescription": {
-                                "": "Default (xml), or the value of the 'Accept' header",
-                                "json": "JSON Format",
-                                "xml": "CTS2 XML"
-                            },
-                            "Description":"Response Format"
-
                         }
                     ]
                 },
@@ -652,22 +470,6 @@
                     "HTTPMethod":"GET",
                     "URI":"/valuesets",
                     "parameters":[
-                        {
-                            "Name":"format",
-                            "Required":"N",
-                            "Type":"enumerated",
-                            "EnumeratedList": [
-                                "",
-                                "json",
-                                "xml"
-                            ],
-                            "EnumeratedDescription": {
-                                "": "Default (xml), or the value of the 'Accept' header",
-                                "json": "JSON Format",
-                                "xml": "CTS2 XML"
-                            },
-                            "Description":"Response Format"
-                        },
                         {
                             "Name":"q",
                             "Required":"N",
@@ -749,23 +551,6 @@
                             "Description":"CodeSystem"
                         },
                         {
-                            "Name":"format",
-                            "Required":"N",
-                            "Type":"enumerated",
-                            "EnumeratedList": [
-                                "",
-                                "json",
-                                "xml"
-                            ],
-                            "EnumeratedDescription": {
-                                "": "Default (xml), or the value of the 'Accept' header",
-                                "json": "JSON Format",
-                                "xml": "CTS2 XML"
-                            },
-                            "Description":"Response Format"
-
-                        },
-                        {
                             "Name":"active",
                             "Required":"N",
                             "Type":"enumerated",
@@ -802,22 +587,6 @@
                             "Type":"string",
                             "Default": "5f51c37b",
                             "Description":"version"
-                        },
-                        {
-                            "Name":"format",
-                            "Required":"N",
-                            "Type":"enumerated",
-                            "EnumeratedList": [
-                                "",
-                                "json",
-                                "xml"
-                            ],
-                            "EnumeratedDescription": {
-                                "": "Default (xml), or the value of the 'Accept' header",
-                                "json": "JSON Format",
-                                "xml": "CTS2 XML"
-                            },
-                            "Description":"Response Format"
                         }
                     ]
                 },
@@ -842,23 +611,6 @@
                             "Description":"version"
                         },
                         {
-                            "Name":"format",
-                            "Required":"N",
-                            "Type":"enumerated",
-                            "EnumeratedList": [
-                                "",
-                                "json",
-                                "xml"
-                            ],
-                            "EnumeratedDescription": {
-                                "": "Default (xml), or the value of the 'Accept' header",
-                                "json": "JSON Format",
-                                "xml": "CTS2 XML"
-                            },
-                            "Description":"Response Format"
-
-                        },
-                        {
                             "Name":"maxtoreturn",
                             "Required":"N",
                             "Type":"int",
@@ -872,22 +624,6 @@
                     "HTTPMethod":"GET",
                     "URI":"/resolvedvaluesets",
                     "parameters":[
-                        {
-                            "Name":"format",
-                            "Required":"N",
-                            "Type":"enumerated",
-                            "EnumeratedList": [
-                                "",
-                                "json",
-                                "xml"
-                            ],
-                            "EnumeratedDescription": {
-                                "": "Default (xml), or the value of the 'Accept' header",
-                                "json": "JSON Format",
-                                "xml": "CTS2 XML"
-                            },
-                            "Description":"Response Format"
-                        },
                         {
                             "Name":"q",
                             "Required":"N",
@@ -984,23 +720,6 @@
                             "Description":"Map Roles"
                         },
                         {
-                            "Name":"format",
-                            "Required":"N",
-                            "Type":"enumerated",
-                            "EnumeratedList": [
-                                "",
-                                "json",
-                                "xml"
-                            ],
-                            "EnumeratedDescription": {
-                                "": "Default (xml), or the value of the 'Accept' header",
-                                "json": "JSON Format",
-                                "xml": "CTS2 XML"
-                            },
-                            "Description":"Response Format"
-
-                        },
-                        {
                             "Name":"maxtoreturn",
                             "Required":"N",
                             "Type":"int",
@@ -1022,23 +741,6 @@
                             "Description":"map"
                         },
                         {
-                            "Name":"format",
-                            "Required":"N",
-                            "Type":"enumerated",
-                            "EnumeratedList": [
-                                "",
-                                "json",
-                                "xml"
-                            ],
-                            "EnumeratedDescription": {
-                                "": "Default (xml), or the value of the 'Accept' header",
-                                "json": "JSON Format",
-                                "xml": "CTS2 XML"
-                            },
-                            "Description":"Response Format"
-
-                        },
-                        {
                             "Name":"maxtoreturn",
                             "Required":"N",
                             "Type":"int",
@@ -1058,23 +760,6 @@
                             "Type":"string",
                             "Default": "PDQ2013_02_15_TO_NCI2013_06D",
                             "Description":"map"
-                        },
-                        {
-                            "Name":"format",
-                            "Required":"N",
-                            "Type":"enumerated",
-                            "EnumeratedList": [
-                                "",
-                                "json",
-                                "xml"
-                            ],
-                            "EnumeratedDescription": {
-                                "": "Default (xml), or the value of the 'Accept' header",
-                                "json": "JSON Format",
-                                "xml": "CTS2 XML"
-                            },
-                            "Description":"Response Format"
-
                         },
                         {
                             "Name":"maxtoreturn",
@@ -1105,23 +790,6 @@
                             "Description":"map version"
                         },
                         {
-                            "Name":"format",
-                            "Required":"N",
-                            "Type":"enumerated",
-                            "EnumeratedList": [
-                                "",
-                                "json",
-                                "xml"
-                            ],
-                            "EnumeratedDescription": {
-                                "": "Default (xml), or the value of the 'Accept' header",
-                                "json": "JSON Format",
-                                "xml": "CTS2 XML"
-                            },
-                            "Description":"Response Format"
-
-                        },
-                        {
                             "Name":"maxtoreturn",
                             "Required":"N",
                             "Type":"int",
@@ -1148,23 +816,6 @@
                             "Type":"string",
                             "Default": "PDQ2013_02_15_TO_NCI2013_06D-2013_02_15",
                             "Description":"map version"
-                        },
-                        {
-                            "Name":"format",
-                            "Required":"N",
-                            "Type":"enumerated",
-                            "EnumeratedList": [
-                                "",
-                                "json",
-                                "xml"
-                            ],
-                            "EnumeratedDescription": {
-                                "": "Default (xml), or the value of the 'Accept' header",
-                                "json": "JSON Format",
-                                "xml": "CTS2 XML"
-                            },
-                            "Description":"Response Format"
-
                         },
                         {
                             "Name":"maxtoreturn",
@@ -1200,24 +851,7 @@
                             "Type":"string",
                             "Default": "PDQ:CDR0000744999",
                             "Description":"map from"
-                        },
-                        {
-                            "Name":"format",
-                            "Required":"N",
-                            "Type":"enumerated",
-                            "EnumeratedList": [
-                                "",
-                                "json",
-                                "xml"
-                            ],
-                            "EnumeratedDescription": {
-                                "": "Default (xml), or the value of the 'Accept' header",
-                                "json": "JSON Format",
-                                "xml": "CTS2 XML"
-                            },
-                            "Description":"Response Format"
-
-                        },
+                        },                        
                         {
                             "Name":"maxtoreturn",
                             "Required":"N",
