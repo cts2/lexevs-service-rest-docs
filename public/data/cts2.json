@@ -128,7 +128,7 @@
                             "Name":"uri",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "ICD-9-CM:00.84",
+                            "Default": "",
                             "Description":"Entity URI"
                         }
                     ]
@@ -143,7 +143,7 @@
                             "Name":"entityid",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "ICD-9-CM:00.84",
+                            "Default": "",
                             "Description":"Entity ID"
                         },
                         {
@@ -249,14 +249,14 @@
                             "Name":"codesystem",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "OBI",
+                            "Default": "",
                             "Description":"codeSystem"
                         },
                         {
                             "Name":"version",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "December2014",
+                            "Default": "",
                             "Description":"version"
                         }
                     ]
@@ -271,14 +271,14 @@
                             "Name":"codesystem",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "OBI",
+                            "Default": "",
                             "Description":"CodeSystem"
                         },
                         {
                             "Name":"version",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "December2014",
+                            "Default": "",
                             "Description":"version"
                         },
                         {
@@ -358,21 +358,21 @@
                             "Name":"codesystem",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "OBI",
+                            "Default": "",
                             "Description":"CodeSystem"
                         },
                         {
                             "Name":"version",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "December2014",
+                            "Default": "",
                             "Description":"version"
                         },
                         {
                             "Name":"entityid",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "obo:GO_0043227",
+                            "Default": "",
                             "Description":"Entity ID"
                         }
                     ]
@@ -387,21 +387,21 @@
                             "Name":"codesystem",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "OBI",
+                            "Default": "",
                             "Description":"CodeSystem"
                         },
                         {
                             "Name":"version",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "December2014",
+                            "Default": "",
                             "Description":"version"
                         },
                         {
                             "Name":"entityid",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "GO_0005575",
+                            "Default": "",
                             "Description":"Entity ID"
                         }
                     ]
@@ -416,21 +416,21 @@
                             "Name":"codesystem",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "OBI",
+                            "Default": "",
                             "Description":"CodeSystem"
                         },
                         {
                             "Name":"version",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "December2014",
+                            "Default": "",
                             "Description":"version"
                         },
                         {
                             "Name":"entityid",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "obo:GO_0043227",
+                            "Default": "",
                             "Description":"Entity ID"
                         }
                     ]
@@ -445,21 +445,21 @@
                             "Name":"codesystem",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "OBI",
+                            "Default": "",
                             "Description":"CodeSystem"
                         },
                         {
                             "Name":"version",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "December2014",
+                            "Default": "",
                             "Description":"version"
                         },
                         {
                             "Name":"entityid",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "obo:GO_0005575",
+                            "Default": "",
                             "Description":"Entity ID"
                         }
                     ]
@@ -737,7 +737,7 @@
                             "Name":"map",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "PDQ2013_02_15_TO_NCI2013_06D",
+                            "Default": "",
                             "Description":"map"
                         },
                         {
@@ -835,21 +835,21 @@
                             "Name":"map",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "PDQ2013_02_15_TO_NCI2013_06D",
+                            "Default": "",
                             "Description":"map"
                         },
                         {
                             "Name":"version",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "PDQ2013_02_15_TO_NCI2013_06D-2013_02_15",
+                            "Default": "",
                             "Description":"map version"
                         },
                         {
                             "Name":"mapfrom",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "PDQ:CDR0000744999",
+                            "Default": "",
                             "Description":"map from"
                         },                        
                         {
