@@ -9,8 +9,7 @@
                     "HTTPMethod":"GET",
                     "URI":"/service",
                     "parameters":[
-                    ]
-                
+                    ]                
                 },
                 {
                     "MethodName":"Search Entities",
@@ -129,6 +128,7 @@
                             "Required":"Y",
                             "Type":"string",
                             "Default": "",
+                            "Default": "MedDRA:10000185",
                             "Description":"Entity URI"
                         }
                     ]
@@ -144,6 +144,7 @@
                             "Required":"Y",
                             "Type":"string",
                             "Default": "",
+                            "Default": "MedDRA:10000185",
                             "Description":"Entity ID"
                         },
                         {
@@ -249,14 +250,14 @@
                             "Name":"codesystem",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "",
+                            "Default": "MedDRA",
                             "Description":"codeSystem"
                         },
                         {
                             "Name":"version",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "",
+                            "Default": "17.1",
                             "Description":"version"
                         }
                     ]
@@ -271,14 +272,14 @@
                             "Name":"codesystem",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "",
+                            "Default": "MedDRA",
                             "Description":"CodeSystem"
                         },
                         {
                             "Name":"version",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "",
+                            "Default": "17.1",
                             "Description":"version"
                         },
                         {
@@ -358,21 +359,21 @@
                             "Name":"codesystem",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "",
+                            "Default": "MedDRA",
                             "Description":"CodeSystem"
                         },
                         {
                             "Name":"version",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "",
+                            "Default": "17.1",
                             "Description":"version"
                         },
                         {
                             "Name":"entityid",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "",
+                            "Default": "MedDRA:10000185",
                             "Description":"Entity ID"
                         }
                     ]
@@ -387,21 +388,21 @@
                             "Name":"codesystem",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "",
+                            "Default": "MedDRA",
                             "Description":"CodeSystem"
                         },
                         {
                             "Name":"version",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "",
+                            "Default": "17.1",
                             "Description":"version"
                         },
                         {
                             "Name":"entityid",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "",
+                            "Default": "MedDRA:10061400",
                             "Description":"Entity ID"
                         }
                     ]
@@ -416,21 +417,21 @@
                             "Name":"codesystem",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "",
+                            "Default": "MedDRA",
                             "Description":"CodeSystem"
                         },
                         {
                             "Name":"version",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "",
+                            "Default": "17.1",
                             "Description":"version"
                         },
                         {
                             "Name":"entityid",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "",
+                            "Default": "MedDRA:10061400",
                             "Description":"Entity ID"
                         }
                     ]
@@ -445,21 +446,21 @@
                             "Name":"codesystem",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "",
+                            "Default": "MedDRA",
                             "Description":"CodeSystem"
                         },
                         {
                             "Name":"version",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "",
+                            "Default": "17.1",
                             "Description":"version"
                         },
                         {
                             "Name":"entityid",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "",
+                            "Default": "MedDRA:10061400",
                             "Description":"Entity ID"
                         }
                     ]
@@ -737,7 +738,7 @@
                             "Name":"map",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "",
+                            "Default": "MA_to_NCIt_Mapping",
                             "Description":"map"
                         },
                         {
@@ -758,7 +759,7 @@
                             "Name":"map",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "PDQ2013_02_15_TO_NCI2013_06D",
+                            "Default": "MA_to_NCIt_Mapping",
                             "Description":"map"
                         },
                         {
@@ -779,14 +780,14 @@
                             "Name":"map",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "PDQ2013_02_15_TO_NCI2013_06D",
+                            "Default": "MA_to_NCIt_Mapping",
                             "Description":"map"
                         },
                         {
                             "Name":"version",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "PDQ2013_02_15_TO_NCI2013_06D-2013_02_15",
+                            "Default": "MA_to_NCIt_Mapping-1.0",
                             "Description":"map version"
                         },
                         {
@@ -807,14 +808,14 @@
                             "Name":"map",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "PDQ2013_02_15_TO_NCI2013_06D",
+                            "Default": "MA_to_NCIt_Mapping",
                             "Description":"map"
                         },
                         {
                             "Name":"version",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "PDQ2013_02_15_TO_NCI2013_06D-2013_02_15",
+                            "Default": "MA_to_NCIt_Mapping-1.0",
                             "Description":"map version"
                         },
                         {
@@ -835,21 +836,21 @@
                             "Name":"map",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "",
+                            "Default": "MA_to_NCIt_Mapping",
                             "Description":"map"
                         },
                         {
                             "Name":"version",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "",
+                            "Default": "MA_to_NCIt_Mapping-1.0",
                             "Description":"map version"
                         },
                         {
                             "Name":"mapfrom",
                             "Required":"Y",
                             "Type":"string",
-                            "Default": "",
+                            "Default": "MA:MA:0000003",
                             "Description":"map from"
                         },                        
                         {
