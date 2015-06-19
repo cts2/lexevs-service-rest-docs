@@ -1,9 +1,6 @@
 {
   "name": "iodocs",
   "version": "0.0.1",
-  "engines": {
-    "node": "0.10.x"
-  },
   "description": "Live API Documentation and Browsing",
   "homepage": "http://mashery.com",
   "keywords": [
@@ -37,8 +34,8 @@
   "devDependencies": {},
   "main": "index",
   "engines": {
-    "node": ">= 0.4.0",
-    "npm": ">= 1.1.49"
+    "node": "0.10.x",
+    "npm": "2.11.x"
   },
   "scripts": {
     "start": "node_modules/.bin/supervisor -e 'js|json' app",
