@@ -1,6 +1,9 @@
 {
   "name": "iodocs",
   "version": "0.0.1",
+  "engines": {
+    "node": "0.10.x"
+  },
   "description": "Live API Documentation and Browsing",
   "homepage": "http://mashery.com",
   "keywords": [
