@@ -383,7 +383,7 @@ li {
   border-left: 1px solid #ddd;
 }
 
-.endpoint {
+.resource {
   margin: 0;
   background-color: #f9f9f9;
   border-bottom: 1px solid #eee;
@@ -403,47 +403,47 @@ li {
   transition-timing-function: ease;
 }
 
-.endpoint.expanded {
+.resource.expanded {
   background-color: #fff;
 }
 
-.endpoint > .title {
+.resource > .title {
   font-weight: normal;
   padding: 20px 0 10px 10px;
   overflow: hidden;
   *zoom: 1;
 }
 
-.endpoint > .title .name {
+.resource > .title .name {
   font-size: 18px;
   float: left;
 }
 
-.endpoint > .title .name:hover {
+.resource > .title .name:hover {
   cursor: pointer;
   text-decoration: underline;
 }
 
-.endpoint > .title .actions {
+.resource > .title .actions {
   float: right;
 }
 
-.endpoint > .title .actions li {
+.resource > .title .actions li {
   float: left;
   padding: 0 10px;
   border-left: 1px solid #ddd;
 }
 
-.endpoint > .title .actions li:first-child {
+.resource > .title .actions li:first-child {
   border: 0;
 }
 
 .methods {
-  display: none;
+  /*display: none;*/
 }
 
 .method {
-  font-size: 14px;
+  font-size: 12px;
   border: 1px solid #eee;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -453,7 +453,7 @@ li {
   border-radius: 5px;
   margin: 10px 0;
   /*    &.authrequired .http-method {
-          background-image: url(/images/lock.png);
+          background-image: url(images/lock.png);
           background-repeat: no-repeat;
           background-position: 7px 50%;
       }*/
@@ -627,6 +627,7 @@ li {
   overflow: auto;
   border: 1px solid rgba(0, 0, 0, 0.2);
   background-color: rgba(255, 255, 255, 0.9);
+  width: 95%;
 }
 
 .method pre.response {
@@ -643,16 +644,21 @@ li {
   border-color: rgba(255, 100, 100, 0.5);
 }
 
-.head, .get {
+.head .http-method{
+  background: #0B6121;
+  border-color: #aecce4;
+}
+
+.get .head{
   background: #e7f0f7;
   border-color: #aecce4;
 }
 
-.head .http-method, .get .http-method {
+.get .http-method {
   background-color: #0061ac;
 }
 
-.head th, .get th, .head td, .get td {
+.get th, .get td {
   border-bottom: 1px solid #9ac0de;
 }
 
@@ -679,6 +685,19 @@ li {
 }
 
 .put th, .put td {
+  border-bottom: 1px solid #e3c399;
+}
+
+.patch {
+  background: #fce9e3;
+  border-color: #f5d5c3;
+}
+
+.patch .http-method {
+  background-color: #d38042;
+}
+
+.patch th, .patch td {
   border-bottom: 1px solid #e3c399;
 }
 
