@@ -445,7 +445,7 @@
                     "name": "Read the specified Value Set",
                     "parameters": {
                         "valueset": {
-                            "default": "CDISC ADaM Terminology",
+                            "default": "CDISC%20ADaM%20Terminology",
                             "description": "CodeSystem",
                             "required": true,
                             "type": "string"
@@ -468,7 +468,7 @@
                     "name": "Read a Value Set Definition ID",
                     "parameters": {
                         "valueset": {
-                            "default": "CDISC ADaM Terminology",
+                            "default": "CDISC%20ADaM%20Terminology",
                             "description": "CodeSystem",
                             "required": true,
                             "type": "string"
@@ -491,7 +491,7 @@
                     "name": "Resolve a Value Set Definition by ID",
                     "parameters": {
                         "valueset": {
-                            "default": "CDISC ADaM Terminology",
+                            "default": "CDISC%20ADaM%20Terminology",
                             "description": "CodeSystem",
                             "required": true,
                             "type": "string"
