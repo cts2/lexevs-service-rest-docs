@@ -1,7 +1,7 @@
 
 {
-    "basePath": "http://lexevscts2.nci.nih.gov",
-    "name": "LexEVS CTS2 6.3 API Documentation (lexevscts2.nci.nih.gov/lexevscts2)",
+    "basePath": "https://lexevscts2.nci.nih.gov",
+    "name": "LexEVS CTS2 6.4 API Documentation (lexevscts2.nci.nih.gov/lexevscts2)",
     "protocol": "rest",
     "publicPath": "/lexevscts2",
     "version": "1.0",
