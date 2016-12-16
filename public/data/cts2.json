@@ -24,7 +24,7 @@
             "methods": {
 
                 "SearchEntities": {
-                    "description": "Search All CTS2 Entities",
+                    "description": "Search all CTS2 entities",
                     "httpMethod": "GET",
                     "name": "Search Entities",
                     "parameters": {
