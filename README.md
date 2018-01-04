@@ -1,5 +1,5 @@
-# LexEVS 6.4 CTS2 API Documentation  #
-On-line, interactive documentation of the CTS2 REST API for LexEVS 6.4.  This documentation is powered by [I/O Docs](https://github.com/mashery/iodocs).
+# LexEVS 6.5 CTS2 API Documentation  #
+On-line, interactive documentation of the CTS2 REST API for LexEVS 6.5.  This documentation is powered by [I/O Docs](https://github.com/mashery/iodocs).
 
 ## Features Include ##
 - List of available CTS2 REST calls for the current version of LexEVS
