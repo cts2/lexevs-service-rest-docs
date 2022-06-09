@@ -48,6 +48,12 @@ blockquote:before, blockquote:after, q:before, q:after {
   float: right;
 }
 
+.f-center {
+  font-size: 8pt;
+  text-align: center;
+  float: bottom;
+}
+
 ins {
   background-color: #ff9;
   color: #000;
